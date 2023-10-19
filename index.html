@@ -2,11 +2,35 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8"/>
-    <title>Название документа (страницы)</title>
+    <title>Lenni art</title>
+    <link rel="stylesheet" href="styles/style.css?ver=0">
+
   </head>
-  <body>
-    <h1>Заголовок страницы</h1>
-    <br>
-    <p title="Подсказка для параграфа"> Параграф текста</p>
+  <body class="body">
+    <header class="page-header">
+      <a href="index.html" class="page-header__logo">Логотип</a>
+      <nav class="page-header__nav">
+        <a href="#" class="page-header__nav-link">Мероприятия</a>
+        <a href="#" class="page-header__nav-link">Блог</a>
+        <a href="#" class="page-header__nav-link">О нас</a>
+        <a href="#" class="page-header__nav-link">Контакты</a>
+      </nav>
+
+      <a href="#" class="btn page-header__user-btn"></a>
+    </header>
+    <main class="main">
+      <div class="home">
+        <header class="main-header home__main-header"></header>
+
+        <section class="offers home__offers"></section>
+        <section class="about home__about"></section>
+        <section class="upcoming home__upcoming"></section>
+        <section class="listing home__listing"></section>
+        <section class="contacts home__contacts"></section>
+
+        <div class="doit home__doit"></div>
+      </div>
+    </main>
+    <footer class="page-footer"></footer>
   </body>
 </html>
