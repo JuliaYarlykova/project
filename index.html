@@ -4,27 +4,31 @@
     <meta charset="UTF-8"/>
     <title>Lenni art</title>
     <link rel="stylesheet" href="styles/style.css?ver=0">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  </head>
+  </head >
   <body class="body">
     <header class="page-header">
-      <a href="index.html" class="page-header__logo">Логотип</a>
-      <nav class="page-header__nav">
+      <div class="page-header__container">
+        <a href="index.html" class="page-header__logo">
+          <img src="assets/images/logo.svg" class="page-header__logo-img"/>
+        </a>
+        <nav class="page-header__nav">
         <a href="#" class="page-header__nav-link">Мероприятия</a>
         <a href="#" class="page-header__nav-link">Блог</a>
         <a href="#" class="page-header__nav-link">О нас</a>
         <a href="#" class="page-header__nav-link">Контакты</a>
-      </nav>
-
+        </nav>
       <a href="#" class="btn page-header__user-btn">Войти</a>
+    </div>
     </header>
     <main class="main">
       <div class="home">
-        <header class="main-header home__main-header">LENNI</header>
-
+        <header class="main-header home__main-header">
+          <h1 class="main-header__title">Арт - пространство</h1>
+          <picture class="main-header__picture">
+            <img src="assets/images/LENNI.png" class="main-header__img">
+          </picture>
+          <p class="main-header__text">для людей, горящих сердцЕМ и делом место для настоящего</p>
+        </header>
         <section class="offers home__offers">
           <a href="#" class="btnEvent offers home__offers-btnEvent">Провести мероприятие</a>
           <a href="#" class="btnRent offers home__offers-btnRent">Стать арендатором</a>
@@ -41,7 +45,6 @@
         <section class="contacts home__contacts">
           <div class="contact contacts home__contacts-contact">Контакты</div>
         </section>
-
         <div class="doit home__doit"></div>
       </div>
     </main>
