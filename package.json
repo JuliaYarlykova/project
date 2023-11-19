@@ -2,7 +2,7 @@
     "name": "course_front_2023",
     "version": "1",
     "description": "course frontend junior",
-    "author": "jkljlk",
+    "author": "si@tagree.ru",
     "devDependencies": {
       "autoprefixer": "^10.4.2",
       "browser-sync": "^2.27.7",

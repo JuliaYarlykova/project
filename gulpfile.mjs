@@ -11,6 +11,7 @@ import sortMediaQueries from "postcss-sort-media-queries";
 
 import minify from "gulp-csso";
 import rename from "gulp-rename";
+import terser from "gulp-terser";
 
 import svgmin from "gulp-svgmin";
 import svgstore from "gulp-svgstore";
@@ -23,10 +24,16 @@ import server from "browser-sync";
 const resources = {
     html: "src/html/**/*.html",
     jsVendor: "src/scripts/vendor/*.js",
+    jsDev: "src/scripts/dev/**/*.js",
     less: "src/styles/**/*.less",
     static: [
         "src/assets/icons/**/*.*",
-        "src/assets/fonts/**/*.{woff,woff2}"
+        "src/assets/fonts/**/*.{woff,woff2}",
+        "src/assets/favicons/**/*.*",
+        "src/assets/video/**/*.{mp4,webm}",
+        "src/assets/audio/**/*.{mp3,ogg,wav,aac}",
+        "src/json/**/*.json",
+        "src/php/**/*.php"
     ],
     images: "src/assets/images/**/*.{png,jpg,jpeg,webp,gig,svg}",
     svgSprite: "src/assets/svg-sprite/*.svg"
@@ -69,24 +76,24 @@ function style(){
     .pipe(gulp.dest("dist/styles"));
 }
 
-function js(){
+function js() {
     return gulp
-        .src("src/scripts/dev/*.js")
-        .pipe(plumber())
-        .pipe(
-            include({
-                prefix: "//@@",
-                basepath: "@file"
-            })
-        )
-    .pipe(gulp.dest("dist/scripts"))
-    .pipe(tester())
-    .pipe(
-        rename(function (path){
-            path.basepath += ".min"
+      .src("src/scripts/dev/*.js")
+      .pipe(plumber())
+      .pipe(
+        include({
+          prefix: "//@@",
+          basepath: "@file"
         })
-    )
-    .pipe(gulp.dest("dist/scripts"))
+      )
+      .pipe(gulp.dest("dist/scripts"))
+      .pipe(terser())
+      .pipe(
+        rename(function (path) {
+          path.basename += ".min";
+        })
+      )
+      .pipe(gulp.dest("dist/scripts"));
 }
 
 function jsCopy(){
