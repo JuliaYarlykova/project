@@ -45,7 +45,7 @@ function clean(){
 
 function includeHtml(){
     return gulp
-        .src("src/html/*/html")
+        .src("src/html/*.html")
         .pipe(plumber())
         .pipe(
             include({
