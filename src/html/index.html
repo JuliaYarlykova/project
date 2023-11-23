@@ -11,7 +11,7 @@
           <picture class="main-header__picture">
             <img src="assets/images/LENNI.svg" class="main-header__img">
           </picture>
-          <p class="main-header__text">для людей, горящих сердцем и делом 
+          <p class="main-header__text">для людей, горящих сердцем и делом
             место для настоящего</p>
         </header>
         <section class="offers home__offers">
@@ -24,9 +24,8 @@
         <section class="upcoming home__upcoming">
           <div class="meetings upcoming home__upcoming-meetings">Мероприятия</div>
         </section>
-        <section class="listing home__listing">
-          <div class="blog listing home__listing-blog">Блог</div>
-        </section>
+        <!-- prettier-ignore -->
+        @@include('blocks/blog-listing.html', {"class": "home__listing"})
         <section class="contacts home__contacts">
           <div class="contact contacts home__contacts-contact">Контакты</div>
         </section>
