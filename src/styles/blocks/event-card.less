@@ -1,77 +1,73 @@
-.listing__card-event{
-    max-width: 405px;
-    width: calc(33.333% - 40px);
-  }
-
 .card-event{
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-  
+  display: flex;
+    width: 405px;
+    max-width: 100%;
+    min-width: 280px;
+    color: @black;
   
 &__link{
     text-decoration: none;
     display: flex;
     flex-direction: column;
-    height: 100%;
-  }
+    width: 100%;
+    &:active{
+      .card-event__title{
+        color: @red;
+        text-decoration-color: @red;
+      }
+    }
   
-&__link:hover .card-event__title{
-    color: #A51505;
-    text-decoration-color: #A51505;
-    
-  }
-  
+    &:hover .card-event__title{
+      @media (hover:hover){
+        color: @red;
+      text-decoration-color: @red;
+      }
+    }
+}
 &__picture{
+    display: block;
     position: relative;
-    display: block;
-    margin-bottom: 25px;
-  }
-  
-&__picture::before{
-    content: "";
-    display: block;
     width: 100%;
-    padding-top: 107.160%;
+    margin: 0 0 25px;
+    font-size: 0;
+    text-decoration: none;
+    overflow: hidden;
+    &::after{
+      content: "";
+      display: block;
+      width: 100%;
+      padding-top: 107.16%;
+    }
   }
-  
-&__picture-img{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
+    &__img{
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
 &__title{
-    min-height: 64px;
-    margin: 0 0 auto;
-    text-decoration: underline;
-    text-decoration-color: transparent;
-    font-family: "Open Sans";
+    min-height: 66px;
+    margin: 0 0 15px;
+    text-decoration: underline transparent;
     font-size: 24px;
-    font-style: normal;
-    font-weight: 700;
-    color: #1f1e1e;
-    line-height: normal;
+    font-weight: 600;
+    color: @black;
+    line-height: 33px;
     transition: color 0.2s, text-decoration-color 0.23s;
   }
-  
-&__text{
-    margin: 15px 0;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: normal;
-    color: #1f1e1e;
-  }
-  
+&__description{
+  margin: 0 0 auto;
+  font-size: 16px;
+  line-height: 22px;
+}
 &__time{
-    margin-top: auto;
-    display: block;
+    margin: 15px 0 0;
     font-size: 14px;
     font-weight: 300;
-    line-height: normal;
-    color: #1f1e1e;
+    line-height: 19px;
   }
 }
