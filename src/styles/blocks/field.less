@@ -1,8 +1,5 @@
 .field {
-  display: flex;
-  flex-direction: column;
   &__title {
-      display: block;
       margin: 0 0 10px;
       color: @black;
       font-weight: 700;
@@ -13,38 +10,31 @@
         margin-bottom: 7px;
       }
   }
-  &__radio{
-    margin-bottom: 9px;
-    &:last-child{
-      margin-bottom: 0;
-    }
-  }
   &__inputs {
     display: flex;
     gap: 15px;
   }
+
+  &__textarea{
+    height: 150px;
+  }
+
   &__textarea,
   &__select,
   &__input{
     box-sizing: border-box;
-    display: block;
     border: none;
-    padding: 0 20px;
     width: 100%;
     border-radius: 5px;
     background-color: @white;
     padding: 17px 20px 16px ;
     color: @black;
     font-size: 16px;
-    line-height: 1.375;
   }
 
   &__select,
   &__input{
     height: 55px;
-  }
-  &__textarea{
-    height: 150px;
   }
 
   &__input {
@@ -86,10 +76,4 @@
 }
 
 
-.field {
-  &__textarea {
-    height: 150px;
-    padding: 20px;
-  }
-  }
   
