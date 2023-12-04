@@ -1,5 +1,5 @@
 <div class="pp">
-    <div class="pp__wrapper">
+    <div class="pp__container">
       <div class="pp__sticky-close">
         <button class="pp__x-btn x-btn">
           <svg class="x-btn__icon" width="24" height="24">
@@ -7,13 +7,13 @@
           </svg>
         </button>
       </div>
-      <div class="pp__container">
-        <h2 class="pp__title">Заполните форму<br />и мы подберем площадку</h2>
-        <form class="pp__form form">
+      <div class="pp__wrapper">
+        <h2 class="pp__title">Заполните форму<br/>и мы подберем площадку</h2>
+        <div class="pp__form form">
           <div class="form__list">
           <div class="form__field form__field--w50 field">
               <h6 class="field__title"> Формат мероприятия</h6>
-              <div class="radio">
+              <div class="field__radio radio">
                 <label class="radio__item">
                   <input class="radio__input" type="radio" name="format" value="seminar" checked>
                   <span class="radio__mark"></span>
@@ -50,48 +50,39 @@
             <div class="form__field field">
               <h6 class="field__title">Дата проведения:</h6>
               <div class="field__inputs">
-                <input type="text" class="field__input field__input--w55" placeholder="ДД"/>
-                <input type="text" class="field__input field__input--w55" placeholder="ММ"/>
-                <input type="text" class="field__input field__input--w110" placeholder="ГГГГ"/>
+                <input type="text" class="field__input field__input--w55 field__input--datetime" placeholder="ДД"/>
+                <input type="text" class="field__input field__input--w55 field__input--datetime" placeholder="ММ"/>
+                <input type="text" class="field__input field__input--w110 field__input--datetime" placeholder="ГГГГ"/>
               </div>
             </div>
           </div>
         </div>
           <div class="form__section">
-            <div class="form__data">
-              <h6 class="field__title">Контактные данные:</h6>
+            <h6 class="field__title">Контактные данные:</h6>
               <div class="form__list form__list--mb50">
-              <div class="form__field form__field--w50 field">
-              <div class="field">
+              <label class="form__field form__field--w50 field">
                 <span class="field__label">Имя*</span>
                 <input class="field__input" type="text" placeholder="Имя" name="name" required>
-              </div>
-              <div class="field">
+              </label>
+              <label class="form__field form__field--w50 field">
                 <span class="field__label">Фамилия*</span>
                 <input class="field__input" type="text" placeholder="Фамилия" name="surname" required>
-              </div>
-            </div>
-            <div class="form__field form__field--w50 field">
-              <label class="field">
+              </label>
+            <label class="form__field form__field--w50 field">
                 <span class="field__label">Телефон*</span>
-                <input class="field__input" type="text" placeholder="Телефон" name="telephone" required>
+                <input class="field__input" type="tel" placeholder="Телефон" name="telephone" required>
               </label>
-              <label class="field">
+              <label class="form__field form__field--w50 field">
                 <span class="field__label">Email*</span>
-                <input class="field__input" type="text" placeholder="Email" name="email" required>
+                <input class="field__input" type="email" placeholder="Email" name="email" required>
               </label>
             </div>
-          </div>
-            </div>
-            </div>
-            <label class="form__field form__field--mb30">
-              <label class="field">
-                <h6 class="field__title">Есть пожелания? Напишите нам:</h6>
-                <textarea class="field__textarea" name="Пожелания"></textarea>
-              </label>
-              <span></span>
+            <label class="form__field form__field--mb30 field">
+              <span class="field__label field__label--textarea">
+                Есть пожелания? Напишите нам:</span>
+              <textarea class="field__textarea" name="Пожелания"></textarea>
             </label>
-          <label class="check">
+          <label class="form__check form__check--mb40 check">
             <input
               type="checkbox"
               name="agree"
@@ -105,8 +96,11 @@
               использования персональных данных
             </span>
           </label>
-        </div>
-        </form>
+          <div class="form__btns">
+            <button type="submit" class="form__btn btn">отправить</button>
+            <button type="button">Закрыть</button>
+          </div>
+        </>
       </div>
     </div>
   </div>
