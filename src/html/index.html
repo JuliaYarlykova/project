@@ -18,17 +18,13 @@
           <a href="#" class="btnEvent offers home__offers-btnEvent">Провести мероприятие</a>
           <a href="#" class="btnRent offers home__offers-btnRent">Стать арендатором</a>
         </section>
-        <section class="about home__about">
-          <div class="About about home__about-About">о нас</div>
-        </section>
+        @@include('blocks/about.html' {class:'home__about'})
         <section class="upcoming home__upcoming">
           <div class="meetings upcoming home__upcoming-meetings">Мероприятия</div>
         </section>
         <!-- prettier-ignore -->
         @@include('blocks/blog-listing.html', {"class": "home__listing"})
-        <section class="contacts home__contacts">
-          <div class="contact contacts home__contacts-contact">Контакты</div>
-        </section>
+        @@include('blocks/contacts.html', {class:'home__contacts'})
         <div class="doit home__doit"></div>
       </div>
     </main>
