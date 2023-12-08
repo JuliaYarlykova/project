@@ -14,14 +14,16 @@
           <p class="main-header__text">для людей, горящих сердцем и делом
             место для настоящего</p>
         </header>
-        <section class="offers home__offers">
-          <a href="#" class="btnEvent offers home__offers-btnEvent">Провести мероприятие</a>
-          <a href="#" class="btnRent offers home__offers-btnRent">Стать арендатором</a>
-        </section>
+        <section class="offers">
+          <div class="offers__container">
+            <h4 class="offers__title">я хочу:</h4>
+            <div class="offers__wrapper">
+              <bottom class="offers__btn--red">Провести мероприятие</bottom>
+              <bottom class="offers__btn btn">Стать арендатором</bottom>
+          </div>
+        </div>
         @@include('blocks/about.html' {class:'home__about'})
-        <section class="upcoming home__upcoming">
-          <div class="meetings upcoming home__upcoming-meetings">Мероприятия</div>
-        </section>
+        @@include('blocks/upcoming.html' {class:'home__upcoming'})
         <!-- prettier-ignore -->
         @@include('blocks/blog-listing.html', {"class": "home__listing"})
         @@include('blocks/contacts.html', {class:'home__contacts'})
