@@ -16,8 +16,31 @@
     &:active{
         color: @red;
     }
-
+    &--all{
+        display: flex;
+        text-decoration: none;
+        padding: 15px 0px 15px 40px;
+        justify-content: end;
+        align-items: baseline;
+        gap: 10px;
+        font-weight: 600;
+        font-size: 16px;
+        height: 0;
+        transition: color 0.2s;
+        color: @black;
+        &:hover{
+            color: @red;
+        
+        }
+        &:active{
+            color: @red;
+        }
+            
+    }
     &__icon{
         margin-left: 20px;
+        &--rev{
+            transform: scale(-1,1);
+        }
     }
 }
