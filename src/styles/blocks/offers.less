@@ -28,7 +28,7 @@
             align-items: center;
             width: 100%;
             max-width: 272px;
-            background-color: #BC3324;
+            background-color: @red;
             color: @white;
             text-align: center;
             font-family: @font1;
@@ -36,6 +36,17 @@
             font-style: normal;
             font-weight: 600;
             line-height: normal;
+            transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+            overflow: hidden;
+            cursor: pointer;
+            &:active{
+                background-color: @red_dark;
+            }
+            &:hover{
+                @media (hover: hover){
+                    background-color: @red_dark;
+                }
+            }
         }
     }
     &__wrapper{

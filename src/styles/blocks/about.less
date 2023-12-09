@@ -11,9 +11,10 @@
         margin: 0 0 50px;
         color: @black;
         font-size: 44px;
-        font-weight: 700px;
+        font-weight: 700;
         &--w868{
             max-width: 868px;
+            width: 100%;
         }
         &--2{
             grid-area: title;
@@ -22,7 +23,7 @@
     &__text{
         align-self: flex-end;
         font-size: 18px;
-        font-weight: 400px;
+        font-weight: 400;
         color: @black;
         max-width: 870px;
         margin:0 0 100px;
@@ -80,24 +81,16 @@
     &__block3{
         display: flex;
         justify-content:space-between;
+        align-items: flex-end;
         gap: 60px;
-    }
-    &__img2{
-        position: absolute;
-        top:18px;
-        left: 49px;
-        right: 9px;
-        bottom: 0;
-        width: calc(100%-50px);
-        object-fit: contain;
     }
 
     &__picture3{
-        max-width: 930px;
-        width: 100%;
-        display: block;
         position: relative;
         box-sizing: border-box;
+        display: block;
+        max-width: 930px;
+        width: 100%;
         padding: 18px 9px 0 49px;
         
         &::before{
@@ -113,12 +106,21 @@
             content: '';
             display: block;
             width: 100%;
-
+            padding-top: 40.860%;
         }
       
     }
+    &__img2{
+        position: absolute;
+        top:18px;
+        left: 49px;
+        right: 9px;
+        bottom: 0;
+        width: calc(100%-58px);
+        object-fit: contain;
+    }
     &__block3--wrapper{
-        max-width: 34px;
+        max-width: 344px;
         width: 100%;
     }
 }
