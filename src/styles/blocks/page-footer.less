@@ -7,6 +7,7 @@
     &__wrapper{
         display: flex;
         justify-content: space-between;
+        margin-bottom: 100px;
     }
     &__border{
         display: flex;
@@ -60,5 +61,51 @@
         &:active{
             color: @red;
         }
+    }
+
+    &__text{
+        font-family: @font1;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        color: @black;
+        margin: auto;
+        &--m{
+            font-weight: 600;
+        }
+        &--b{
+            font-weight: 700;
+        }
+    }
+    &__down{
+        display: flex;
+        flex-direction: row;
+        gap: 254px;
+        align-items: baseline;
+    }
+
+    &__left{
+        display: flex;
+        flex-direction: row;
+        gap: 60px;
+    }
+
+    &__link{
+        display: flex;
+    }
+    &__right{
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+        font-family: @font1;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+    &__icon{
+        min-width: 160px;
+        width: 100%;
     }
 }
