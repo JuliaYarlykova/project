@@ -5,26 +5,36 @@
   <body class="body">
     @@include('blocks/page-header.html')
     <main class="main">
+      @@include('blocks/breadcrumbs.html')
         <article class="event">
-            
-            <form class="reserve event__reserve">
-              <div class="reserve__checks">
-                Чекбоксы
+          <header class="event__header">
+            <h1 class="event__title title"></h1>
+            <div class="event__about">
+              <div class="event__info">
+                <time class="event__time" datetime="">
+                  16.12.2024
+                </time>
+                <div class="event__info-text"></div>
               </div>
-              <div class="reserve__scheme">
-                Схема столов
+              <picture class="event__picture">
+                <img src="assets/images/event" alt="the best..." class="event__img">
+              </picture>
+              <div class="event__info">
+                <span class="event__time" date-caption="">
+                  16.12.2024
+                </span>
+                <div class="event__info-text"></div>
               </div>
-              <div class="reserve__order">
-                Оформление заказа
-              </div>
-              <div class="reserve__legend">
-                Легенда
-              </div>
-            </form>
+            </div>
+
+          </header>
+          <div class="event__container">
+            <div class="event__content content"></div>
+              @@include('blocks/reserve.html', {"class": "event__reserve"})
+          </div>
           </article>
     </main>
     @@include('blocks/page-footer.html')
 
-    @@include('blocks/event-pp.html')
   </body>
 </html>

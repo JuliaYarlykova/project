@@ -1,25 +1,93 @@
 .event {
     padding: 40px 0 150px;
+    &__container{
+      .container;
+    }
+    &__header{
+      .container;
+      margin-bottom: 80px;
+    }
+    &__about{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @media @bw768{
+        flex-wrap: wrap;
+      }
+    }
+    &__info{
+      flex-shrink: 0;
+      box-sizing: border-box;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      padding: 13px 0;
+      text-align: right;
+      text-transform: uppercase;
+      font-family: @font3;
+      font-weight: 300;
+      &::before,
+      &::after{
+        content: "";
+        position: absolute;
+        right: 0;
+        display: block;
+        width: 140px;
+        max-width: 100%;
+        height: 1px;
+
+      }
+      &::before{
+        top: 0;
+
+      }
+      &::after{
+        border: 0;
+      }
+      &:last-child{
+        align-items: flex-start;
+        text-align: left;
+        &::before,
+      &::after{
+        left: 0;
+        right: auto;
+      }
+      }
+    }
+    &__time{
+      font-size: 30px;
+      font-style: normal;
+      line-height: 36px;
+      font-weight: 300;
+      &[datetime]{
+        &::after{
+          content:attr(data-caption);
+          margin-left: 10px;
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 19px;
+        }
+      }
+    }
+    &__info-text{
+      font-size: 16px;
+      line-height: 19px;
+      font-weight: 700;
+    }
+    &__picture{
+      display: block;
+      width: 497px;
+      margin: 0 50px;
+    }
+    &__img{
+      display: block;
+      width: 100%;
+    }
+    &__content{
+      max-width: 830px;
+      
+    }
   }
-  .reserve {
-    display: grid;
-    gap: 65px 11%;
-    grid-template-columns: 405px calc(89% - 405px);
-    grid-template-areas:
-      "checks scheme"
-      "order legend";
-    width: 100%;
-  }
-  .reserve__checks {
-    grid-area: checks;
-  }
-  .reserve__order {
-    grid-area: order;
-  }
-  .reserve__scheme {
-    grid-area: scheme;
-  }
-  .reserve__scheme {
-    grid-area: scheme;
-  }
+  
 
