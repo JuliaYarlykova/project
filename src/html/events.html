@@ -4,6 +4,7 @@
   <body class="body">
     @@include('blocks/page-header.html')
     <main class="main">
+        @@include('blocks/breadcrumbs.html')
         <div class="events">
             <section class="listing events__listing">
                 <h2 class="listing__title section-title">мероприятия</h2>
@@ -64,8 +65,15 @@
                         "datetime": "2022-12-27T10:00"
                         },
                     ])
+                    
                 </div>
             </section>
+            <a href="#" class="listing__link link--all">
+                <span class="listing__name">Показать еще</span>
+                <svg class="link__icon--down" width="91px" height="60px">
+                    <use xlink:href="assets/icons/symbols.svg#link"></use>
+                </svg>
+            </a>
             <section class="events__services">
                 <h2 class="events__title section-title--fw400 section-title">Дополнительные услуги</h2>
                 <p class="events__text">Перед запуском проекта, мы подготавливаем подробную смету и согласуем

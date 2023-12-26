@@ -2,6 +2,15 @@
     display: flex;
     align-items: center;
     gap: 54px;
+    @media @bw768 {
+        flex-direction: column;
+        
+        gap: 30px;
+    }
+    @media @bw600 {
+        flex-direction: row;
+        gap: 30px;
+    }
     &--event{
         flex-direction: column;
         gap: 40px;
@@ -46,6 +55,16 @@
         }
         &:last-child{
             margin-bottom: 0;
+        }
+        @media @bw768 {
+            max-width: 401px;
+            width: 100%;
+            text-align: center;
+        }
+        @media @bw600 {
+            max-width: 401px;
+            width: 100%;
+            text-align: left;
         }
         &--event{
             max-width: 401px;

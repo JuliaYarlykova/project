@@ -8,6 +8,9 @@
         display: flex;
         justify-content: space-between;
         margin-bottom: 100px;
+        @media @bw650{
+            flex-direction: column;
+        }
     }
     &__border{
         display: flex;
@@ -44,7 +47,9 @@
             height: 100%;
             background-color: @red;
         }
-
+        @media @bw650{
+            margin-bottom: 62px;
+        }
     }
     &__nav-link{
         display: block;
@@ -62,33 +67,43 @@
             color: @red;
         }
     }
-
+/*
     &__text{
         font-family: @font1;
         font-size: 16px;
-        font-style: normal;
         font-weight: 600;
-        line-height: normal;
         color: @black;
-        margin: auto;
+        &--p{
+            width: 100%;
+        min-width: 265px;
+        }
+        &--s{
+            width: 100%;
+        min-width: 210px;
+        }
         &--m{
-            font-weight: 600;
+            font-weight: 400;
         }
         &--b{
             font-weight: 700;
         }
     }
-    &__down{
+    &__social-net{
         display: flex;
         flex-direction: row;
-        gap: 254px;
-        align-items: baseline;
+        align-items: flex-end;
+    }
+    &__left-down{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        gap: 60px;
     }
 
     &__left{
         display: flex;
-        flex-direction: row;
-        gap: 60px;
+        flex-direction: column;
+        gap: 20px;
     }
 
     &__link{
@@ -97,15 +112,91 @@
     &__right{
         display: flex;
         flex-direction: row;
+        align-items: flex-end;
         gap: 15px;
-        font-family: @font1;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: normal;
     }
     &__icon{
         min-width: 160px;
         width: 100%;
+        align-items: center;
+    }
+}
+
+*/
+
+&__social-net{
+    display: grid;
+    grid-template-areas: 
+    "text1 text1 text1"
+    "left1 img right1";
+    grid-template-columns: 1fr 1fr 1fr;
+    @media @bw768{
+        grid-template-areas:
+        "img img" 
+    "text1 text1"
+    "left1 right1";
+    grid-template-columns: 1fr 1fr;
+    }
+    @media @bw600{
+        grid-template-areas:
+        "img" 
+        "left1"
+        "text1"
+        "right1";
+    grid-template-columns: 1fr;
+    }
+}
+    &__text{
+        font-family: @font1;
+        font-size: 16px;
+        font-weight: 600;
+        color: @black;
+        margin: 0;
+        white-space: nowrap;
+        &--m{
+            grid-area: text1;
+            @media @bw600 {
+                text-align: end;
+            }
+        }
+        &--b{
+            font-weight: 700;
+        }
+        @media @bw768{
+            font-size: 14px;
+        }
+    }
+    &__left-down{
+        grid-area: left1;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        gap: 60px;
+        @media @bw768{
+            margin-top: 14px;
+            gap: 15px;
+        }
+        @media @bw600{
+            flex-direction: column;
+            align-items: flex-start;
+            margin-bottom: 16px;
+        }
+    }
+    &__icon{
+        grid-area: img;
+        min-width: 160px;
+        width: 100%;
+        align-items: center;
+        @media @bw768{
+            margin-bottom: 60px;
+        }
+    }
+    &__right{
+        grid-area: right1;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: right;
+        gap: 15px;
     }
 }
