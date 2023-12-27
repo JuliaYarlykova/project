@@ -8,6 +8,9 @@
         &--mb50 {
             margin-bottom: 50px;
         }
+        @media @bw600{
+            flex-direction: column;
+        }
     }
     &__field {
         width: 100%;
@@ -17,14 +20,25 @@
         &--mb30 {
             margin-bottom: 30px;
         }
+        @media @bw600{
+            min-width: 240px;
+        }
     }
     &__group{
         width: calc(50%-30px);
+        @media @bw600 {
+            margin-bottom: 30px;
+        }
     }
 
     &__btns{
         display: flex;
         gap: 93px;
+        @media @bw600{
+            flex-direction: column;
+            gap: 30px;
+            align-items: center;
+        }
     }
 
     &__btn{
@@ -59,4 +73,5 @@
             margin-bottom: 40px;
         }
     }
+    
 }

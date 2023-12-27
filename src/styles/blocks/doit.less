@@ -1,0 +1,38 @@
+.doit{
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-width: 2100px;
+    @media @bw1340{
+        min-width: 1519px;
+    }
+    @media @bw768{
+        min-width: 873px;
+
+    }
+    @media @bw600{
+        min-width: 437px;
+    }
+    &__text{
+        margin: 0;
+        color: @black;
+        font-family: @font3;
+        font-size: 128px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 120%;
+        white-space: nowrap;
+        text-align:right;
+        @media @bw1340{
+            font-size: 90px;
+        }
+        @media @bw768{
+            font-size: 80px;
+            white-space: pre-wrap;
+        }
+        @media @bw600{
+            font-size: 40px;
+        }
+    }
+}

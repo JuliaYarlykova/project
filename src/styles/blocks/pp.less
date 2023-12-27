@@ -6,6 +6,9 @@
   right: 0;
   bottom: 0;
   padding: 90px 50px 50px;
+  @media @bw600 {
+    padding: 80px 20px 20px;
+  }
   background-color: @gray;
   @supports (backdrop-filter: blur(25px)){
     background-color: @black_40;
@@ -22,6 +25,9 @@
     max-width: 1210px;
     margin: auto;
     padding: 70px 40px 40px;
+    @media @bw600 {
+      padding: 40px 20px 20px;
+    }
     background-color: @gray;
     background-image: url(../assets/images/noise.png);
     background-position: 0 0;
@@ -52,6 +58,12 @@
     color: @white;
     position: absolute;
     transition: background-color 0.2s;
+    @media @bw600{
+      width: 36px;
+      height: 36px;
+      right: -37px;
+      top: -60px;
+    }
     &:hover{
       @media(hover:hover){
         background-color: @red_dark;
@@ -71,6 +83,14 @@
     line-height: 30px;
     color: @white;
     letter-spacing: 0.44px;
+    
+    @media @bw600{
+      margin: -70px 0 40px;
+      font-size: 14px;
+      padding: 10px 20px;
+      line-height: 19px;
+      max-width: 225px;
+  }
   }
   &__form{
     margin: auto;
