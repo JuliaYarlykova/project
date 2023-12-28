@@ -11,8 +11,10 @@
         flex-direction: row;
         gap: 30px;
     }
-    &--event{
+    &__event{
         flex-direction: column;
+        display: flex;
+        align-items: center;
         gap: 40px;
     }
     &__img{
@@ -32,6 +34,9 @@
         color: @black;
         &--event{
             text-align: center;
+        }
+        @media @bw1020{
+            font-size: 18px;
         }
     }
     &__info{
@@ -56,6 +61,10 @@
         &:last-child{
             margin-bottom: 0;
         }
+        @media @bw1020{
+            
+            font-size: 14px;
+        }
         @media @bw768 {
             max-width: 401px;
             width: 100%;
@@ -66,10 +75,16 @@
             width: 100%;
             text-align: left;
         }
-        &--event{
-            max-width: 401px;
-            width: 100%;
-            text-align: center;
-        }
+    }
+    &__info-event{
+        margin: 0 0 5px;
+        display: block;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: normal;
+        color: @black;
+        max-width: 280px;
+        width: 100%;
+        text-align: center;
     }
 }
