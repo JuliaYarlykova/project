@@ -1,14 +1,13 @@
 .reserve {
-  .container;
+  display: grid;
+  gap: 65px 11%;
+  grid-template-columns: 405px calc(89%-405px);
+  grid-template-areas: "checks scheme"
+  "order legend";
+  width: 100%;
     &__scheme-wrapper {
       position: relative;
       width: 100%;
-      &::after {
-        content: "";
-        display: block;
-        width: 100%;
-        padding-top: 51.15384%;
-      }
     }
     &__checks{
       grid-area: checks;
@@ -90,7 +89,8 @@
       font-size: 14px;
       line-height: 19px;
       &--free {
-        &::before{
+        &::before,
+        &::after{
           content: "";
           box-sizing: border-box;
           display: block;
@@ -180,5 +180,8 @@
         font-weight: 700;
         font-size: 18px;
         line-height: 25px;
+        &--mb30{
+          margin-bottom: 30px;
+        }
       }
   }
