@@ -24,4 +24,22 @@
             color: @white;
         }
     }
+    &--red{
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: @red;
+        color: @white;
+        font-family: @font1;
+        font-weight: 400;
+        &:active{
+            background-color: @red_dark;
+        }
+        &:hover{
+            @media (hover: hover){
+                background-color: @red_dark;
+            }
+        }
+    }
 }

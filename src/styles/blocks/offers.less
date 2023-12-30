@@ -16,39 +16,14 @@
         max-width: 90px;
         width: 100%;
         margin-bottom: 46px;
-        @media @bw600{
+        @media @bw768{
             margin-bottom: 25px;
         }
     }
     &__btn{
 
         &--red{
-            padding: 15px 40px;
-            box-sizing: border-box;
-            border: none;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: @red;
-            color: @white;
-            text-align: center;
-            font-family: @font1;
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 20px;
-            transition: color 0.2s, background-color 0.2s, border-color 0.2s;
-            overflow: hidden;
-            cursor: pointer;
-            &:active{
-                background-color: @red_dark;
-            }
-            &:hover{
-                @media (hover: hover){
-                    background-color: @red_dark;
-                }
-            }
-            @media @bw600{
+            @media @bw768{
                 padding: 15px 30px;
             }
         }
@@ -58,7 +33,7 @@
         flex-direction: row;
         justify-content: center;
         gap: 107px;
-        @media @bw600{
+        @media @bw768{
             display: flex;
             flex-direction: column-reverse;
             gap: 25px;

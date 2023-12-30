@@ -1,26 +1,47 @@
 .main-header{
     padding: 100px 0;
+    @media @bw1340 {
+      padding: 80px 0;
+    }
 &__title,
 &__text{
   padding-left: 40px;
   padding-right: 40px;
   text-align: center;
   text-transform: uppercase;
-  font-family: "Lora", sans-serif;
+  font-family: @font2;
   font-weight: 400;
   font-size: 45px;
   line-height: normal;
   color: @black;
+  @media @bw1340 {
+    font-size: 30px;
+  }
+  @media @bw768 {
+    font-size: 13px;
+  }
 }
 
 &__title{
   margin: 0 0 70px;
+  @media @bw1340 {
+    margin:0 0 50px;
+  }
+  @media @bw768 {
+    margin:0 0 30px;
+  }
 }
 
 &__text{
   margin: 0 auto;
   max-width: 948px;
   width: 100%;
+  @media @bw1340 {
+    max-width: 632px;
+  }
+  @media @bw768 {
+    max-width: 234px;
+  }
 }
 
 &__picture{
@@ -28,6 +49,12 @@
   margin-bottom: 70px;
   position: relative;
   width: 100%;
+  @media @bw1340 {
+    margin-bottom:50px;
+  }
+  @media @bw768 {
+    margin-bottom:30px;
+  }
 }
 &__picture::before{
   content: '';
