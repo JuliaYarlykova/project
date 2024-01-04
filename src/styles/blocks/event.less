@@ -1,5 +1,8 @@
 .event {
     padding: 40px 0 150px;
+    @media @bw1340 {
+      padding: 40px 0 100px;
+    }
     &__container{
       .container;
     }
@@ -13,7 +16,7 @@
       align-items: center;
       margin-bottom: 80px;
       @media @bw768{
-        flex-wrap: wrap;
+
       }
     }
     &__info{
@@ -28,6 +31,9 @@
       text-transform: uppercase;
       font-family: @font3;
       font-weight: 300;
+      @media @bw1340 {
+        padding: 6px 0;
+      }
       &::before,
       &::after{
         content: "";
@@ -79,11 +85,17 @@
           line-height: 19px;
         }
       }
+      @media @bw1340 {
+        font-size: 18px;
+      }
     }
     &__info-text{
       font-size: 16px;
       line-height: 19px;
       font-weight: 700;
+      @media @bw1340 {
+        font-size: 12px;
+      }
     }
     &__picture{
       display: block;

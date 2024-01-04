@@ -1,5 +1,8 @@
 .about{
     padding-bottom: 90px;
+    @media @bw600 {
+        padding-bottom: 60px;
+    }
     &__block{
         display: flex;
         flex-direction: column;
@@ -12,9 +15,20 @@
         color: @black;
         font-size: 44px;
         font-weight: 700;
+        @media @bw1340 {
+            font-size: 35px;
+            margin: 0 0 40px;
+        }
+        @media @bw768 {
+            font-size: 26px;
+        }
         &--w868{
             max-width: 868px;
             width: 100%;
+            @media @bw768 {
+                max-width: 420px;
+                margin: 0;
+            }
         }
         &--2{
             grid-area: title;
@@ -28,12 +42,27 @@
         max-width: 870px;
         margin:0 0 100px;
         width: 100%;
+        @media @bw1340 {
+            font-size: 16px;
+            max-width: 637px;
+        }
         &--2{
             grid-area: text;
             margin-left: auto;
+            @media @bw768 {
+                max-width: 350px;
+            }
         }
         &--mb90{
             margin-bottom: 90px;
+            @media @bw1020 {
+                margin-bottom: 0;
+                max-width: 280px;
+            }
+            @media @bw600 {
+                margin-bottom: 0;
+                max-width: 900px;
+            }
         }
     }
     &__picture{
@@ -64,6 +93,23 @@
         "text text text";
         gap: 60px;
         grid-template-columns: 1fr 1fr 404px;
+        @media @bw1020 {
+            grid-template-areas:
+        "picture1 picture1 picture1"
+        "title title picture2"
+        "text text picture2";
+        grid-template-columns: 1fr 1fr 262px;
+        gap: 40px;
+        }
+        @media @bw768 {
+            grid-template-areas:
+        "picture1"
+        "title"
+        "text"
+        "picture2";
+        grid-template-columns: 1fr;
+        gap: 40px;
+        }
     }
     &__picture2{
         grid-area: picture2;
@@ -83,6 +129,9 @@
         justify-content:space-between;
         align-items: flex-end;
         gap: 60px;
+        @media @bw1020 {
+            flex-direction: column;
+        }
     }
 
     &__picture3{
@@ -92,7 +141,9 @@
         max-width: 930px;
         width: 100%;
         padding: 18px 9px 0 49px;
-        
+        @media @bw1020 {
+            margin-top: 50px;
+        }
         &::before{
             content: '';
             position: absolute;
@@ -122,5 +173,25 @@
     &__block3--wrapper{
         max-width: 344px;
         width: 100%;
+        @media @bw1020 {
+            max-width: 950px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: end;
+        }
+        @media @bw600 {
+            flex-direction: column;
+            gap: 40px;
+            align-items: flex-start;
+        }
+    }
+    &__link{
+        @media @bw1020 {
+            min-width: 260px;
+        }
+        @media @bw600 {
+            min-width: 280px;
+        }
     }
 }

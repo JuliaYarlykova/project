@@ -5,6 +5,20 @@
   grid-template-areas: "checks scheme"
   "order legend";
   width: 100%;
+  @media @bw1340 {
+    grid-template-columns: 200px calc(89%-200px);
+    grid-template-areas:
+    "scheme scheme"
+    "checks legend"
+    "checks order";
+  }
+  @media @bw1020 {
+    grid-template-areas:
+    "scheme"
+    "legend"
+    "checks"
+    "order";
+  }
     &__scheme-wrapper {
       position: relative;
       width: 100%;
@@ -23,6 +37,9 @@
       display: flex;
       flex-direction: column;
       align-items: flex-end;
+      @media @bw1340 {
+        align-items: center;
+      }
     }
     &__legend{
       grid-area: legend;
@@ -30,6 +47,10 @@
       flex-direction: column;
       align-items: flex-end;
       text-align: right;
+      @media @bw1020 {
+        align-items: flex-start;
+        text-align: left;
+      }
     }
     &__check{
       margin-bottom: 10px;
@@ -42,6 +63,9 @@
       flex-direction: column;
       align-items: flex-end;
       margin-bottom: 35px;
+      @media @bw1020 {
+        align-items: flex-start;
+      }
     }
     &__price-item{
       box-sizing: border-box;
@@ -78,6 +102,9 @@
       display: flex;
       flex-direction: column;
       align-items: flex-end;
+      @media @bw1020 {
+        align-items: flex-start;
+      }
     }
     &__note{
       box-sizing: border-box;
@@ -191,6 +218,10 @@
         font-weight: 600;
         font-size: 16px;
         line-height: 22px;
+        @media @bw1020 {
+          font-size: 11px;
+          padding: 6px 46px;
+        }
       }
       &__section-title{
         margin: 0 0 20px;
@@ -200,6 +231,11 @@
         &--mb30{
           margin-bottom: 30px;
         }
+        @media @bw1340 {
+          font-size: 16px;
+          margin: 0 0 10px;
+        }
+  
       }
 
 
