@@ -5,17 +5,26 @@
     width: 100%;
     min-width: 2100px;
     @media @bw1340{
-        min-width: 1519px;
+        min-width: 1485px;
     }
     @media @bw768{
-        min-width: 873px;
+        min-width: 850px;
 
     }
     @media @bw600{
-        min-width: 437px;
+        min-width: 428px;
+    }
+    &__text1{
+        display: flex;
+        flex-direction: row;
+        gap: 85px;
+        @media @bw768{
+            flex-direction: column;
+            gap: 0px;
+        }
     }
     &__text{
-        margin: 0;
+        margin: 0 0 0 -50px;
         color: @black;
         font-family: @font3;
         font-size: 128px;
@@ -29,10 +38,17 @@
         }
         @media @bw768{
             font-size: 80px;
-            white-space: pre-wrap;
+            margin: 0 0 0 -30px;
+            text-align: left;
         }
         @media @bw600{
-            font-size: 40px;
+            font-size: 45px;
+            margin: 0 0 0 -20px;
+        }
+        &--r{
+            @media @bw768 {
+                text-align: right;
+            }
         }
     }
 }

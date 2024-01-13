@@ -1,5 +1,8 @@
 <section class="upcoming @@class">
+    <div class="upcoming__top">
+    </div>
     <div class="upcoming__container">
+        
         <h2 class="upcoming__title section-title">Мероприятия</h2>
         <div class="upcoming__card">
             @@loop('event-card.html', [
@@ -38,11 +41,9 @@
                     <use xlink:href="assets/icons/symbols.svg#link"></use>
                 </svg>
             </a>
-            <div class="upcoming__group">
-                <picture class="upcoming__img">
-                    <img src="/assets/images/group.jpg" alt="group">
-                </picture>
-            </div>
+            <div class="upcoming__wrapper">
+                @@include('rectangle.html')
+              </div>
             <a href="#" class="upcomig__link link">
                 <svg class="link__icon" width="91px" height="60px">
                     <use xlink:href="assets/icons/symbols.svg#link"></use>
@@ -53,6 +54,7 @@
             <a href="#" class="upcoming__link link link--all">
                 <span class="link__name">Смотреть все</span>
             </a>
-        </div>
     </div>
+</div>
+<div class="upcoming__bottom"></div>
   </section>
