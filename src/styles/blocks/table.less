@@ -1,38 +1,38 @@
-.table{
-    width: 100%;
+.table {
+  width: 100%;
   border-collapse: collapse;
   color: @black;
   text-align: center;
   margin-bottom: 50px;
-  @media @bw768{
+  @media @bw768 {
     display: block;
   }
   &__head,
   &__body,
-  &__footer{
-    @media @bw768{
+  &__footer {
+    @media @bw768 {
       display: block;
       margin: 0 -20px;
     }
   }
-  &__head-tr{
-    @media @bw768{
+  &__head-tr {
+    @media @bw768 {
       display: flex;
     }
   }
   &__tr {
     &:nth-child(2n-1) {
       background-color: fade(@black, 3%);
-      @media @bw768{
+      @media @bw768 {
         background-color: transparent;
       }
     }
-    @media @bw768{
+    @media @bw768 {
       display: flex;
       flex-wrap: wrap;
     }
   }
-  &__head-th{
+  &__head-th {
     box-sizing: border-box;
     border-right: 1px solid @gray_dark;
     height: 85px;
@@ -41,33 +41,33 @@
     font-size: 18px;
     font-weight: 600;
     text-transform: uppercase;
-    
+
     &:last-child {
-        border-right: none;
-        padding-right: 0;
+      border-right: none;
+      padding-right: 0;
+    }
+    @media @bw768 {
+      font-size: 14px;
+      width: 33.3333%;
+    }
+    &:nth-child(2) {
+      @media @bw768 {
+        padding-left: 10px;
       }
-      @media @bw768{
-        font-size: 14px;
-        width: 33.3333%;
+    }
+    &:nth-child(2n-1) {
+      @media @bw768 {
+        background-color: fade(@black, 3%);
       }
-      &:nth-child(2){
-        @media @bw768 {
-          padding-left: 10px;
-        }
+    }
+    &:first-child {
+      @media @bw768 {
+        display: none;
       }
-      &:nth-child(2n-1){
-        @media @bw768{
-          background-color: fade(@black, 3%);
-        }
-      }
-      &:first-child {
-        @media @bw768{
-          display: none;
-        }
-      }
+    }
   }
-  &__th{
-    @media @bw768{
+  &__th {
+    @media @bw768 {
       font-size: 14px;
       line-height: 19px;
     }
@@ -75,7 +75,7 @@
   &__footer-th {
     height: 60px;
     font-size: 0;
-    @media @bw768{
+    @media @bw768 {
       color: #6c6c6c;
       font-weight: 300;
       font-size: 14px;
@@ -86,55 +86,53 @@
   &__footer-th {
     box-sizing: border-box;
     padding: 10px;
-    border-right: 1px solid #BFBFBF;
+    border-right: 1px solid #bfbfbf;
     text-transform: uppercase;
     &:first-child {
       padding-left: 0;
-      @media @bw768{
+      @media @bw768 {
         display: none;
       }
     }
     &:last-child {
       border-right: none;
       padding-right: 0;
-      @media @bw768{
+      @media @bw768 {
         padding-right: 10px;
-
       }
     }
-    &:nth-child(2){
+    &:nth-child(2) {
       @media @bw768 {
         padding-left: 10px;
       }
     }
-    &:nth-child(2n-1){
-      @media @bw768{
+    &:nth-child(2n-1) {
+      @media @bw768 {
         background-color: fade(@black, 3%);
       }
     }
-    @media @bw768{
+    @media @bw768 {
       display: flex;
       align-items: center;
       justify-content: center;
       height: auto;
       width: 33.3333%;
-      padding-top:20px ;
+      padding-top: 20px;
       padding-bottom: 20px;
     }
-
   }
   &__body-th {
     box-sizing: border-box;
     height: 50px;
     padding: 10px 10px 10px 0;
     border-top: 1px solid @gray_dark;
-    border-bottom: 1px solid  @gray_dark;
+    border-bottom: 1px solid @gray_dark;
     border-right: 1px solid @gray_dark;
     font-weight: 400;
     font-size: 18px;
     line-height: 25px;
     text-align: left;
-    @media @bw768{
+    @media @bw768 {
       display: block;
       height: auto;
       min-height: 50px;
@@ -153,7 +151,7 @@
     font-weight: 600;
     font-size: 16px;
     line-height: 22px;
-    @media @bw768{
+    @media @bw768 {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -167,23 +165,21 @@
     &:last-child {
       border-right: none;
       padding-right: 0;
-      @media @bw768{
+      @media @bw768 {
         padding-right: 10px;
-
       }
     }
-    &:nth-child(2n-1){
-      @media @bw768{
+    &:nth-child(2n-1) {
+      @media @bw768 {
         background-color: fade(@black, 3%);
       }
     }
   }
-  &__footer-tr{
-    @media @bw768{
+  &__footer-tr {
+    @media @bw768 {
       display: flex;
       border-top: 1px solid @gray_dark;
     }
-    
   }
   &__ok {
     display: block;

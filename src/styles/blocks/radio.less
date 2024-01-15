@@ -1,48 +1,48 @@
 .radio {
-    display: flex;
-    flex-direction: column;
-    
-    &__label {
-      box-sizing: border-box;
-      position: relative;
-      display: block;
-      margin-bottom: 15px;
-      min-height: 23px;
-      padding-left: 23px;
-      color: @black;
-      cursor: pointer;
-      &:last-child {
-        margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+
+  &__label {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    margin-bottom: 15px;
+    min-height: 23px;
+    padding-left: 23px;
+    color: @black;
+    cursor: pointer;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__mark {
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 23px;
+    height: 23px;
+    border: 2px solid @black;
+    border-radius: 50%;
+    padding: 3px;
+    background-clip: content-box;
+    background-color: transparent;
+    transition: background-color 0.2s;
+  }
+  &__input {
+    .is-hidden();
+    &:checked {
+      & ~ .radio__mark {
+        background-color: @black;
       }
     }
-    &__mark {
-        box-sizing: border-box;
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 23px;
-        height: 23px;
-        border: 2px solid @black;
-        border-radius: 50%;
-        padding: 3px;
-        background-clip: content-box;
-        background-color: transparent;
-        transition: background-color 0.2s;
-    }
-    &__input {
-        .is-hidden();
-        &:checked {
-          &~.radio__mark {
-            background-color: @black;
-          }
-        }
-    }
-    &__name {
-        display: block;
-        font-family: @font1;
-        margin-left: 20px;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 22px;
-      }
+  }
+  &__name {
+    display: block;
+    font-family: @font1;
+    margin-left: 20px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+  }
 }
