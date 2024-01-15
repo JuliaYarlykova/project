@@ -29,6 +29,9 @@
         #1c1b1b 0%,
         rgba(255, 255, 255, 0) 82.86%
       );
+      @media @bw768 {
+        margin-right: 10px;
+      }
     }
     &::after {
       margin-left: 50px;
@@ -37,6 +40,9 @@
         #1c1b1b 0%,
         rgba(255, 255, 255, 0) 100%
       );
+      @media @bw768 {
+        margin-left: 10px;
+      }
     }
   }
   &__nav {
@@ -75,62 +81,6 @@
       color: @red;
     }
   }
-  /*
-    &__text{
-        font-family: @font1;
-        font-size: 16px;
-        font-weight: 600;
-        color: @black;
-        &--p{
-            width: 100%;
-        min-width: 265px;
-        }
-        &--s{
-            width: 100%;
-        min-width: 210px;
-        }
-        &--m{
-            font-weight: 400;
-        }
-        &--b{
-            font-weight: 700;
-        }
-    }
-    &__social-net{
-        display: flex;
-        flex-direction: row;
-        align-items: flex-end;
-    }
-    &__left-down{
-        display: flex;
-        flex-direction: row;
-        align-items: flex-end;
-        gap: 60px;
-    }
-
-    &__left{
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    &__link{
-        display: flex;
-    }
-    &__right{
-        display: flex;
-        flex-direction: row;
-        align-items: flex-end;
-        gap: 15px;
-    }
-    &__icon{
-        min-width: 160px;
-        width: 100%;
-        align-items: center;
-    }
-}
-
-*/
 
   &__social-net {
     display: grid;
