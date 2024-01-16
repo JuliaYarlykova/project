@@ -198,8 +198,18 @@
     left: 49px;
     right: 9px;
     bottom: 0;
-    width: calc(100%-58px);
+    width: calc(100% - 58px);
     object-fit: contain;
+    @media @bw768 {
+      width: calc(100% - 37px);
+      left: 29px;
+      top: 13px;
+    }
+    @media @bw600 {
+      width: calc(100% - 25px);
+      left: 20px;
+      top: 8px;
+    }
   }
 
   &__block3--wrapper {
