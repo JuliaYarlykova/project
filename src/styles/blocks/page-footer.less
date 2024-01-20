@@ -85,7 +85,7 @@
   &__social-net {
     display: grid;
     grid-template-areas:
-      "text1 text1 text1"
+      "text1 text1  text1"
       "left1 img right1";
     grid-template-columns: 1fr 1fr 1fr;
     @media @bw768 {
@@ -140,15 +140,36 @@
       margin-bottom: 16px;
     }
   }
-  &__icon {
-    grid-area: img;
-    min-width: 160px;
-    width: 100%;
+  &__socnet{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 44px;
+    @media @bw768 {
+      margin-right: -357px;
+    }
+    @media @bw600 {
+      margin-right: 0;
+    }
+  }
+  &__img{
+    display: flex;
+    grid-area: img1;
+    width: 58px;
+    height: 58px;
+    justify-content: center;
     align-items: center;
+    background-color: @black;
+    color: @white;
+    border-radius: 40px;
     @media @bw768 {
       margin-bottom: 60px;
     }
+    &--2{
+      grid-area: img2;
+    }
   }
+  
   &__right {
     grid-area: right1;
     display: flex;
