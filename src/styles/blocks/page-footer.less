@@ -110,15 +110,25 @@
     font-size: 16px;
     font-weight: 600;
     color: @black;
+    text-decoration: none;
     white-space: nowrap;
+    &:hover {
+      color: @red;
+    }
+    &:active {
+      color: @red;
+    }
     &--m {
       grid-area: text1;
+      &:hover {
+        color: @black;
+      }
+      &:active {
+        color: @black;
+      }
       @media @bw600 {
         text-align: end;
       }
-    }
-    &--b {
-      font-weight: 700;
     }
     @media @bw768 {
       font-size: 14px;
@@ -162,6 +172,7 @@
     background-color: @black;
     color: @white;
     border-radius: 40px;
+    cursor: pointer;
     @media @bw768 {
       margin-bottom: 60px;
     }
@@ -176,6 +187,8 @@
     flex-direction: row;
     align-items: flex-end;
     justify-content: right;
+    text-decoration: none;
     gap: 15px;
+    cursor: pointer;
   }
 }
