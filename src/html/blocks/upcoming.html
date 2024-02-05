@@ -1,49 +1,62 @@
 <section class="upcoming @@class">
+  
   <div class="upcoming__top"></div>
   <div class="upcoming__container">
     <h2 class="upcoming__title section-title">Мероприятия</h2>
-    <div class="upcoming__card">
-      @@loop('event-card.html',  [
-      {
-      "class": "listing__card-event",
-      "img": "assets/images/nirvana.jpg",
-      "alt": "nirvana",
-      "title": "Собираемся и слушаем альбом Nirvana",
-      "descr": "Это третий альбом группы...",
-      "time": "07.12.2022 | начало 18.00",
-      "datetime": "2022-12-07T18:00"
-      },
-      {
-      "class": "listing__card-event",
-      "img": "assets/images/HowStuffWorks.jpg",
-      "alt": "stuff",
-      "title": "Есть тема, нужно обсудить с HowStuffWorks",
-      "descr": "Один из самых популярных подкастов в мире...",
-      "time": "14.12.2022 | начало 18.30",
-      "datetime": "2022-12-14T18:30"
-      },
-      {
-      "class": "listing__card-event",
-      "img": "assets/images/Sade.jpg",
-      "alt": "Sade",
-      "title": "Вечер | The Best of Sade",
-      "descr": "Музыка группы имеет эклектичный характер, сочетая в себе элементы музыки соул, джаза, ритм-блюза и фанка.",
-      "time": "16.12.2022 | начало 20.00",
-      "datetime": "2022-12-16T20:00"
-      },])
-    </div>
-    <div class="upcoming__slider">
-      <button type="'button" class="upcomig__link link">
-        <svg class="link__icon--rev" width="91px" height="60px">
-          <use xlink:href="assets/icons/symbols.svg#link"></use>
-        </svg>
-      </button>
-      <div class="upcoming__wrapper">@@include('rectangle.html')</div>
-      <button type="'button" class="upcomig__link link">
-        <svg class="link__icon link__icon--ml0" width="91px" height="60px">
-          <use xlink:href="assets/icons/symbols.svg#link"></use>
-        </svg>
-      </button>
+
+    <div class="upcoming__swiper swiper swiper--3s js-swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <!-- prettier-ignore -->
+          @@include('event-card.html', {
+            "class": "",
+            "img": "assets/images/nirvana.jpg",
+            "alt": "nirvana",
+            "title": "Собираемся и слушаем альбом Nirvana",
+            "descr": "Это третий альбом группы...",
+            "time": "07.12.2022 | начало 18.00",
+            "datetime": "2022-12-07T18:00"
+          })
+        </div>
+        <div class="swiper-slide">
+          <!-- prettier-ignore -->
+          @@include('event-card.html', {
+            "class": "",
+            "img": "assets/images/HowStuffWorks.jpg",
+            "alt": "stuff",
+            "title": "Есть тема, нужно обсудить с HowStuffWorks",
+            "descr": "Один из самых популярных подкастов в мире...",
+            "time": "14.12.2022 | начало 18.30",
+            "datetime": "2022-12-14T18:30"
+          })
+        </div>
+        <div class="swiper-slide">
+          <!-- prettier-ignore -->
+          @@include('event-card.html', {
+            "class": "",
+            "img": "assets/images/Sade.jpg",
+            "alt": "Sade",
+            "title": "Вечер | The Best of Sade",
+            "descr": "Музыка группы имеет эклектичный характер, сочетая в себе элементы музыки соул, джаза, ритм-блюза и фанка.",
+            "time": "16.12.2022 | начало 20.00",
+            "datetime": "2022-12-16T20:00"
+          })
+        </div>
+        <!-- Здесь добавьте еще хотя бы три слайда по аналогии -->
+      </div>
+      <footer class="swiper-footer">
+        <button type="button" class="swiper-arrow-prev arrow arrow--left">
+          <svg class="arrow__icon" width="92" height="62">
+            <use xlink:href="assets/icons/symbols.svg#link"></use>
+          </svg>
+        </button>
+        <div class="swiper-pagination"></div>
+        <button type="button" class="swiper-arrow-next arrow">
+          <svg class="arrow__icon" width="92" height="62">
+            <use xlink:href="assets/icons/symbols.svg#link"></use>
+          </svg>
+        </button>
+      </footer>
     </div>
     <div class="upcoming__look">
       <a href="#" class="upcoming__link link link--all">
