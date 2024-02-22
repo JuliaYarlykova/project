@@ -332,22 +332,20 @@ if (subscribeForm.length) {
     errorElement: "span",
     submitHandler: function (form, event) {
       event.preventDefault();
-      $.ajax({
-        url: subscribeAction,
-        method: "POST",
-        data: {
-          email: subscribeEmail.val()
+      fetch(subscribeAction, {
+        method: 'POST',
+        body:{
+          email:subscribeEmail.val(),
+
         },
-        success: function () {
-          subscribeEmail.val("");
-          subscribeEmail.blur();
-          alert("Вы успешно подписались на рассылку новостей");
-        },
-        error: function () {
-          alert("Что-то пошло не так, попробуйте еще раз");
-        }
+      }).then(()=>{
+        subscribeEmail.val("");
+        subscribeEmail.blur();
+        toastr.success('Вы успешно подписались на рассылку новостей', "");
+      }).catch(()=>{
+        toastr.error('Попробуйте еще раз', "");
       });
-    }
+    },
   });
-}
+};
 })();
