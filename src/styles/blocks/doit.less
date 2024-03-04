@@ -5,10 +5,11 @@
   width: 100%;
   min-width: 2100px;
   @media @bw1340 {
+    margin-top: 105px;
     min-width: 1485px;
   }
-  @media @bw768 {
-    min-width: 850px;
+  @media @bw1020 {
+    min-width: 867px;
   }
   @media @bw600 {
     min-width: 428px;
@@ -17,9 +18,9 @@
     display: flex;
     flex-direction: row;
     gap: 85px;
-    @media @bw768 {
+    @media @bw1020 {
       flex-direction: column;
-      gap: 0px;
+      gap: 13px;
     }
   }
   &__text {
@@ -35,18 +36,24 @@
     @media @bw1340 {
       font-size: 90px;
     }
-    @media @bw768 {
+    @media @bw1020 {
       font-size: 80px;
-      margin: 0 0 0 -30px;
+      margin: 0px 0 0 -30px;
       text-align: left;
     }
     @media @bw600 {
       font-size: 45px;
-      margin: 0 0 0 -20px;
+      margin: 0 0 0 -7px;
     }
     &--r {
-      @media @bw768 {
+      @media @bw1020 {
         text-align: right;
+      }
+    }
+    &--mt20{
+      @media @bw1020 {
+        margin-top: 20px;
+        margin-left: -3px;
       }
     }
   }

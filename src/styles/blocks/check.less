@@ -9,6 +9,10 @@
     padding-left: 40px;
     color: @black;
     cursor: pointer;
+    @media @bw768 {
+      display: flex;
+      padding-top: 0;
+    }
 
     &__input {
         .is-hidden();
@@ -50,7 +54,8 @@
         line-height: 22px;
         color: @black;
         @media @bw650{
-          font-size: 14px;
+          font-size: 12px;
+          line-height: 16px;
       }
       }
       &--red {

@@ -9,6 +9,12 @@
   }
   box-sizing: border-box;
   padding: 60px 0 75px;
+  @media @bw1020 {
+    padding-top: 100px;
+  }
+  @media @bw768 {
+    padding-top: 84px;
+  }
   &__container {
     .container;
   }
@@ -37,8 +43,8 @@
         #1c1b1b 0%,
         rgba(255, 255, 255, 0) 82.86%
       );
-      @media @bw768 {
-        margin-right: 10px;
+      @media @bw1020 {
+        margin-right: 0px;
       }
     }
     &::after {
@@ -70,7 +76,7 @@
       background-color: @red;
     }
     @media @bw650 {
-      margin-bottom: 62px;
+      margin-bottom: 69px;
     }
   }
   &__nav-link {
@@ -96,12 +102,12 @@
       "text1 text1  text1"
       "left1 img right1";
     grid-template-columns: 1fr 1fr 1fr;
-    @media @bw768 {
+    @media @bw1020 {
       grid-template-areas:
-        "img img"
-        "text1 text1"
-        "left1 right1";
-      grid-template-columns: 1fr 1fr;
+        "img img img"
+        "text1 text1 text1"
+        "left1 left1 right1";
+      grid-template-columns: 1fr 1fr 1fr;
     }
     @media @bw600 {
       grid-template-areas:
@@ -137,9 +143,10 @@
       }
       @media @bw600 {
         text-align: end;
+        margin-bottom: 6px;
       }
     }
-    @media @bw768 {
+    @media @bw1020 {
       font-size: 14px;
     }
   }
@@ -149,14 +156,15 @@
     flex-direction: row;
     align-items: flex-end;
     gap: 60px;
-    @media @bw768 {
-      margin-top: 14px;
+    @media @bw1020 {
+      margin-top: 34px;
       gap: 15px;
     }
     @media @bw600 {
       flex-direction: column;
       align-items: flex-start;
       margin-bottom: 16px;
+      gap: 20px;
     }
   }
   &__socnet{
@@ -164,11 +172,13 @@
     flex-direction: row;
     justify-content: center;
     gap: 44px;
-    @media @bw768 {
-      margin-right: -357px;
+    @media @bw1020 {
+      grid-column-start: 2;
     }
-    @media @bw600 {
+    @media @bw768 {
       margin-right: 0;
+      grid-column-start: 1;
+      gap: 30px;
     }
   }
   &__img{
@@ -182,8 +192,13 @@
     color: @white;
     border-radius: 40px;
     cursor: pointer;
-    @media @bw768 {
+    @media @bw1020 {
       margin-bottom: 60px;
+    }
+    @media @bw768 {
+      width: 48px;
+      height: 48px;
+margin-bottom: 23px;
     }
     &--2{
       grid-area: img2;
@@ -199,5 +214,14 @@
     text-decoration: none;
     gap: 15px;
     cursor: pointer;
+    font: @font1;
+    font-weight: 600px;
+    font-size: 14px;
+    @media @bw1020 {
+      grid-column-start: 2;
+    }
+    @media @bw768 {
+      grid-column-start: 1;
+    }
   }
 }

@@ -50,10 +50,20 @@
   }
   &__title {
     margin-top: 135px;
+    @media @bw1020 {
+      margin-top: 35px;
+    }
   }
 
   &__link {
     margin-top: 70px;
     margin-bottom: 95px;
+    @media @bw1020 {
+      margin-top: 28px;
+    }
+    @media @bw768 {
+      margin-top: -5px;
+      font-size: 14px;
+    }
   }
 }

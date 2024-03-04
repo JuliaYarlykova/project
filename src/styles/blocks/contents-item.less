@@ -25,6 +25,10 @@
     height: 110px;
     background-color: @black;
     color: @red;
+    @media @bw768 {
+      width: 65px;
+      height: 65px;
+    }
   }
   &__title {
     margin: 0 0 10px;
@@ -97,6 +101,13 @@
   &__map{
     width: 100%;
     max-width: 752px;
+    @media @bw1020 {
+      max-width: 708px;
+      height: 463px;
+    }
+    @media @bw768 {
+      height: 186px;
+    }
   }
   &__link{
     display: block;

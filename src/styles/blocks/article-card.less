@@ -15,12 +15,20 @@
     @media @bw768{
       padding-bottom: 110px;
       padding-right: 0;
+      padding-top: 8px;
     }
   }
   &__time {
     font-weight: 300;
     font-size: 16px;
     line-height: 22px;
+    @media @bw1020 {
+      margin-bottom: 30px;
+    }
+    @media @bw768 {
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
   }
   &__title-link,
   &__description {
@@ -40,6 +48,9 @@
     @media @bw1020 {
       margin: auto 0 20px;
     }
+    @media @bw768 {
+      margin: auto 0 10px;
+    }
     &:hover {
       color: @red;
       text-decoration-color: @red;
@@ -48,18 +59,27 @@
   &__title {
     margin-top: 70px;
     color: inherit;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 24px;
     line-height: 33px;
     @media @bw1020 {
       margin-bottom: 0;
       margin-top: 0;
+      font-size: 20px;
+    }
+    @media @bw768 {
+      font-size: 16px;
+      line-height: 21.79px;
     }
   }
   &__description {
     margin: 0;
     font-size: 16px;
     line-height: 22px;
+    @media @bw768 {
+      font-size: 14px;
+      line-height: 19px;
+    }
   }
   &__arrow {
     position: absolute;
@@ -67,6 +87,9 @@
     bottom: 30px;
     color: inherit;
     transition: none;
+    @media @bw768 {
+      bottom: 45px;
+    }
   }
   & + .article-card {
     margin-top: 120px;
@@ -83,6 +106,16 @@
       height: 1px;
       background-color: @black;
       pointer-events: none;
+      @media @bw768 {
+        margin: 0 auto 40px;
+      }
+    }
+    
+    @media @bw1020 {
+      margin-top: 66px;
+    }
+    @media @bw768 {
+      margin-top: 29px;
     }
   }
   box-sizing: border-box;
@@ -90,6 +123,7 @@
   width: 100%;
   @media @bw1020 {
     flex-direction: column;
+    
   }
   &:hover {
     .article-card__picture {
