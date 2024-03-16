@@ -10,6 +10,9 @@
     font-family: @font1;
     font-size: 16px;
     font-weight: 400;
+    @media @bw768 {
+      margin-bottom: 53px;
+    }
   }
   &__info {
     display: flex;
@@ -17,11 +20,24 @@
     justify-content: space-between;
     gap: 64px;
     margin-bottom: 150px;
+    @media @bw1340 {
+      justify-content: center;
+      column-gap: 100px;
+      row-gap: 41px;
+      margin-bottom: -31px;
+    }
+    @media @bw768 {
+      margin-bottom: 12px;
+    }
   }
   &__link {
     display: flex;
     flex-direction: column;
     margin: 70px 0 232px;
     gap: 40px;
+    @media @bw1340 {
+      margin: 58px 0 207px;
+      gap: 28px;
+    }
   }
 }

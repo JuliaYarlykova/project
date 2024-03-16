@@ -38,6 +38,7 @@
     font-weight: 300;
     @media @bw1340 {
       padding: 6px 0;
+      margin-top: 38px;
     }
     &--1 {
       grid-area: text1;
@@ -97,6 +98,7 @@
     }
     @media @bw1340 {
       font-size: 18px;
+      line-height: 25px;
     }
   }
   &__info-text {
@@ -104,7 +106,7 @@
     line-height: 19px;
     font-weight: 700;
     @media @bw1340 {
-      font-size: 12px;
+      font-size: 14px;
     }
   }
   &__picture {
@@ -112,6 +114,10 @@
     grid-area: picture;
     width: 497px;
     margin: 0 50px;
+    @media @bw1340 {
+      width: 245px;
+      margin: 0 19px;
+    }
     @media @bw768 {
       width: 260px;
     }

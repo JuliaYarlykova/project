@@ -20,6 +20,10 @@
     display: flex;
     height: 49px;
     margin-bottom: 15px;
+    @media @bw768 {
+      margin-left: -20px;
+      margin-right: -20px;
+    }
   }
   &__input {
     width: 100%;
@@ -30,6 +34,9 @@
     height: 100%;
     &:focus {
       outline: none;
+    }
+    @media @bw768 {
+      padding: 17px 17px 13px 20px;
     }
   }
   &__submit {
@@ -50,6 +57,10 @@
       @media (hover: hover) {
         background-color: @red;
       }
+    }
+    @media @bw768 {
+      font-size: 12px;
+      padding: 15px 20px;
     }
     &:active {
       background-color: @red;
