@@ -1,7 +1,11 @@
 .event {
   padding: 40px 0 150px;
   @media @bw1340 {
-    padding: 40px 0 100px;
+    padding: 40px 0 0px;
+
+  }
+  @media @bw768 {
+    padding: 80px 0 0px;
   }
   &__container {
     .container;
@@ -21,7 +25,8 @@
         "picture picture"
         "text1 text2";
       grid-template-columns: auto;
-      gap: 30px;
+      gap: 40px 30px;
+      margin-bottom: 60px;
     }
   }
   &__info {
@@ -39,6 +44,9 @@
     @media @bw1340 {
       padding: 6px 0;
       margin-top: 38px;
+    }
+    @media @bw768 {
+      margin-top: 0;
     }
     &--1 {
       grid-area: text1;
@@ -107,6 +115,9 @@
     font-weight: 700;
     @media @bw1340 {
       font-size: 14px;
+    }
+    @media @bw768 {
+      font-size: 12px;
     }
   }
   &__picture {

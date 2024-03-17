@@ -348,4 +348,45 @@ if (subscribeForm.length) {
     },
   });
 };
+
+const scene = document.querySelector('.js-scene').children
+
+const checks = document.querySelectorAll('.js-check')
+let color_check='#ff0000'
+
+for(let i = 0;i<checks.length;i++){
+  checks[i].children[0].addEventListener('change', function() {
+    if (this.checked){
+      if (checks[i].classList.contains('check--red')){
+        color_check = '#ff0000'
+      }
+      else color_check='#000000'
+      const child = scene[i+1].children
+      
+      const figure = child[0].children
+     
+      for (let f of figure){
+        f.style.fill = color_check
+        
+      }
+      child[1].style.fill = 'white'
+    }
+    if (!this.checked){
+      if (checks[i].classList.contains('check--red')){
+        color_check = '#ff0000'
+      }
+      else color_check='#000000'
+      const child = scene[i+1].children
+      
+      const figure = child[0].children
+     
+      for (let f of figure){
+        f.style.fill = ''
+        
+      }
+      child[1].style.fill = color_check
+    }
+  })
+}
+
 })();

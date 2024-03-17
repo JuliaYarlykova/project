@@ -1,17 +1,18 @@
 .reserve {
   display: grid;
   gap: 65px 11%;
-  grid-template-columns: 405px calc(89%-405px);
+  grid-template-columns: 405px calc(89% - 405px);
   grid-template-areas:
     "checks scheme"
     "order legend";
   width: 100%;
   @media @bw1340 {
-    grid-template-columns: 200px calc(89%-200px);
+    grid-template-columns: 200px calc(89% - 200px);
     grid-template-areas:
       "scheme scheme"
       "checks legend"
       "checks order";
+      gap: 60px 11%;
   }
   @media @bw768 {
     grid-template-areas:
@@ -19,6 +20,7 @@
       "legend"
       "checks"
       "order";
+      grid-template-columns: 1fr;
   }
   &__scheme-wrapper {
     position: relative;
@@ -29,9 +31,19 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    @media @bw1340 {
+      max-width: 192px;
+      width: 100%;
+    }
   }
   &__order {
     grid-area: order;
+    @media @bw1340 {
+      margin-left: 42px;
+    }
+    @media @bw768 {
+      margin-left: 0;
+    }
   }
   &__scheme {
     grid-area: scheme;
@@ -40,6 +52,10 @@
     align-items: flex-end;
     @media @bw1340 {
       align-items: center;
+      margin-left: -30px;
+    }
+    @media @bw768 {
+      margin-left: 0;
     }
   }
   &__legend {
@@ -57,6 +73,9 @@
     margin-bottom: 10px;
     &:last-child {
       margin-bottom: 0;
+    }
+    @media @bw1340 {
+      margin-bottom: 15px;
     }
   }
   &__price {
@@ -86,6 +105,13 @@
       width: 24px;
       height: 24px;
       background-color: @black;
+      @media @bw768 {
+        width: 20px;
+        height: 20px;
+      }
+    }
+    @media @bw768{
+      margin-bottom: 0;
     }
     &::after {
       content: attr(data-caption);
@@ -172,6 +198,9 @@
     &::after {
       content: " " attr(data-caption) " | " attr(data-price);
     }
+    @media @bw768 {
+      font-size: 14px;
+    }
   }
   &__sum {
     text-align: right;
@@ -190,6 +219,9 @@
     font-size: 20px;
     font-weight: 600;
     margin-bottom: 53px;
+    @media @bw1340 {
+      margin-bottom: 43px;
+    }
     &::before {
       content: attr(data-caption);
       margin-right: 30px;
@@ -210,6 +242,9 @@
     align-items: center;
     width: 100%;
     max-width: 780px;
+    @media @bw768 {
+      max-width: 285px;
+    }
   }
   &__scheme-title {
     margin: 0 0 40px;
@@ -219,6 +254,11 @@
     font-weight: 600;
     font-size: 16px;
     line-height: 22px;
+    @media @bw1340 {
+      font-size: 11px;
+      padding: 6px 47px;
+      margin: 0 0 26px;
+    }
     @media @bw768 {
       font-size: 11px;
       padding: 6px 46px;
@@ -234,7 +274,24 @@
     }
     @media @bw1340 {
       font-size: 16px;
-      margin: 0 0 10px;
+      margin: 0;
+      margin-bottom: 20px;
     }
+    @media @bw768 {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.scene{
+  @media @bw1340 {
+    transform: scale(0.81);
+    margin-left: -20px;
+  }
+  @media @bw768 {
+    transform: scale(0.36);
+    margin-left: -252px;
+    margin-top: -125px;
+    margin-bottom: -134px;
   }
 }
