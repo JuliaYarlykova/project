@@ -349,44 +349,134 @@ if (subscribeForm.length) {
   });
 };
 
-const scene = document.querySelector('.js-scene').children
+const scene = document.querySelector('.js-scene').children; //svg scene
 
-const checks = document.querySelectorAll('.js-check')
-let color_check='#ff0000'
+const checks = document.querySelectorAll('.js-check');//label class="reserve__check"
+let color_check='#bc3324';//цвет чекбокса
 
+let red_price;//переменная для хранения цены красных столов
+let black_price;//переменная для хранения цены черных столов
+
+const price_item = document.querySelectorAll('.js-price'); //div с ценой
+
+//считываение цен
+price_item.forEach((price)=>{
+  if(price.classList.contains('reserve__price-item--red'))
+    red_price = price.textContent;
+  else
+    black_price = price.textContent;
+});
+
+const tickets = document.querySelectorAll('.js-tickets');//div class="reserve__tickets"
+
+const sum = document.querySelector('.js-sum');//div с общей суммой
+
+//подсчет цены и количества при checked
+const sum_plus = (color_check)=>{
+    if (color_check === '#bc3324'){
+        tickets[0].children[0].textContent = +tickets[0].children[0].textContent + 1;
+        tickets[0].children[1].textContent = +tickets[0].children[1].textContent + +red_price;
+        
+    }
+      else{
+        tickets[1].children[0].textContent = +tickets[1].children[0].textContent + 1;
+        tickets[1].children[1].textContent = +tickets[1].children[1].textContent + +black_price;
+      }
+    sum.textContent = +tickets[0].children[1].textContent + +tickets[1].children[1].textContent
+};
+
+//подсчет цены и количества при unchecked
+const sum_minus = (color_check)=>{
+  if (color_check === '#bc3324'){
+    tickets[0].children[0].textContent = +tickets[0].children[0].textContent - 1;
+    tickets[0].children[1].textContent = +tickets[0].children[1].textContent - +red_price;
+    
+}
+  else{
+    tickets[1].children[0].textContent = +tickets[1].children[0].textContent - 1;
+    tickets[1].children[1].textContent = +tickets[1].children[1].textContent - +black_price;
+  }
+sum.textContent = +tickets[0].children[1].textContent + +tickets[1].children[1].textContent
+}
+
+
+//определение цвета чекбокса
+const check_class = (check_obj, cls) =>{
+  if (check_obj.classList.contains(cls)){
+    color_check = '#bc3324';
+  }
+  else color_check='#1f1e1e';
+  return color_check;
+};
+
+//отметка чекбоксами
 for(let i = 0;i<checks.length;i++){
   checks[i].children[0].addEventListener('change', function() {
     if (this.checked){
-      if (checks[i].classList.contains('check--red')){
-        color_check = '#ff0000'
-      }
-      else color_check='#000000'
-      const child = scene[i+1].children
+      check_class(checks[i], 'check--red');
+      const child = scene[i+1].children;
       
-      const figure = child[0].children
+      const figure = child[0].children;
      
+      //покраска столов
       for (let f of figure){
-        f.style.fill = color_check
-        
+        f.style.fill = color_check;
       }
-      child[1].style.fill = 'white'
+
+      child[1].style.fill = 'white';
+      sum_plus(color_check);
     }
     if (!this.checked){
-      if (checks[i].classList.contains('check--red')){
-        color_check = '#ff0000'
-      }
-      else color_check='#000000'
-      const child = scene[i+1].children
+      check_class(checks[i], 'check--red');
+      const child = scene[i+1].children;
       
-      const figure = child[0].children
+      const figure = child[0].children;
      
       for (let f of figure){
-        f.style.fill = ''
+        f.style.fill = '';
         
       }
-      child[1].style.fill = color_check
+      child[1].style.fill = color_check;
+      sum_minus(color_check);
     }
-  })
+
+  });
 }
+
+//отметка столами
+for(let i = 1;i<scene.length;i++){
+  scene[i].addEventListener('click', function(){
+    if (checks[i-1].children[0].checked == false && checks[i-1].children[0].disabled == false){
+      check_class(scene[i], 'scene__table--red');
+      const child = scene[i].children;
+        
+      const figure = child[0].children;
+
+      child[1].style.fill = 'white';
+      
+      for (let f of figure){
+        f.style.fill = color_check;
+      }
+      checks[i-1].children[0].checked = true;
+      sum_plus(color_check);
+  }
+  else{
+    check_class(scene[i], 'scene__table--red');
+    const child = scene[i].children;
+      
+    const figure = child[0].children;
+
+    child[1].style.fill = color_check;
+    
+    for (let f of figure){
+      f.style.fill = '';
+    }
+    checks[i-1].children[0].checked = false;
+    sum_minus(color_check);
+  }
+  });
+}
+
+
 
 })();
