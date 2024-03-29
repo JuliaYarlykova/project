@@ -108,10 +108,12 @@
     }
   }
   &__map{
-    width: 100%;
-    max-width: 752px;
+    width: calc(100% - 578px);
+    @media @bw1340 {
+      width: calc(100% - 500px);
+    }
     @media @bw1020 {
-      max-width: 708px;
+      width: 100%;
       height: 463px;
     }
     @media @bw768 {
